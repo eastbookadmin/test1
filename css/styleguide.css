@@ -3,7 +3,9 @@
   --ebk500: #d8d8d8;
   --ebk700: #acacac;
   --ebk800: #828282;
+    --ebk300:#ECECEC;
   --ebred: #f12535;
+    --ebblue: #002855;
   --white: #ffffff;
  
   --font-size-l: 24px;
@@ -40,6 +42,7 @@ h4{
 }
 h5{
     font-family: Open Sans;
+    font-weight: 300;
     font-size: 14px;
     line-height: 20px;
 }
