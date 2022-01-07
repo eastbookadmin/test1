@@ -7,19 +7,18 @@
     box-sizing: border-box;
 }
 
-body{
-    background-color: var(--ebk500);
-
+img {
+    display: block
 }
 
-.main-feed {
-  background-color: var(--ebk500);
+body{
+    background-color: var(--ebk500);
   display: flex;
   flex-direction: column;
   width: 375px;
 }
 
-.navigationbar-header {
+.gnb {
     align-items: center;
     background-color: var(--white);
     display: flex;
@@ -29,71 +28,125 @@ body{
     justify-content:space-between
 }
 
- .main-feed section {
-      display: flex;
-      align-items: center;
-      flex-direction: column;
-      width: 375px;
-     margin-bottom: 40px;
+ section {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 375px;
+    margin-bottom: 40px;
 }
 
-.main-feed .feed-post {
-  background-color: var(--white);
-  border-radius: 8px;
-  display: flex;
-  flex-direction: column;
-  margin-top:24px;
-  padding: 32px;
+.feed_post {
+    background-color: var(--white);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    margin-top:24px;
+    padding: 32px;
     width:340px;
 }
-
-.main-feed .feed-post-title {
-  margin-bottom: 24px;
+article > *{
+    margin-bottom:24px;
 }
-.main-feed .feed-post-body{
-    margin-bottom: 24px;
+
+.feed_post_body{
     color: var(--ebk800);
     white-space : normal;
-
 }
 
-.feed-post-img{
-      margin-bottom: 24px;
-    
+.author{
+    display: flex;
+    align-items: center;
 }
+
+.author img {
+    border: 1px var(--ebk700) solid;
+    border-radius: 16px;
+    margin: 0 4px 0 0;
+}
+
+.feed_post_info {
+    display: flex;
+    list-style: none; 
+    font-family: Open Sans;
+    font-size: 12px;
+    color: var(--ebk700);
+        margin-bottom: 0px;
+}
+
+.feed_post_info li{
+    display:flex;
+    align-items: center;
+    margin-right: 4px;
+
+}
+.post_date{
+    margin-left: auto;
+}
+
+section footer {
+    display: flex;
+    width: 276px;
+    align-items: flex-start;
+}
+
+section footer ul li{
+    padding-right: 8px;
+    display: flex;
+    align-items: center;
+    padding-right: 8px;
+}
+
+section footer img {
+    margin-right: 8px;
+    }
+
+section footer ul{
+    display: inline-flex;
+    flex-wrap: wrap;
+    margin-top: 12px;
+    width: 232px;
+    list-style: none;
+}
+
+
+feed-post-footer-entity img {
+    border: 1px solid var(--ebk500);
+    border-radius: 11px;
+    margin-right:8px;
+}
+
+
 .slide_img {
-      height: 276px;
-      object-fit: cover;
-      width: 276px;
+    height: 276px;
+    object-fit: cover;
+    width: 276px;
     border: 1px var(--ebk300) solid;
     border-radius: 8px;
 }
 
 
 .img_nav{
-      margin: 8px auto;   
+    margin: 8px auto;   
 }
 
-.feed-post-img ul {
-      border-radius: 2px;
-      height: 4px;
-      display: flex;
-      align-items: center;
-      width: 56px;
+.feed_post_img ul {
+    border-radius: 2px;
+    height: 4px;
+    display: flex;
+    align-items: center;
+    width: 56px;
+    list-style: none;  
 }
 
-.feed-post-img ul li{
-      list-style: none;    
-}
-
-.ellipse-20 {
+.focus {
   background-color: var(--ebblue);
   border-radius: 4px;
   height: 8px;
   width: 8px;
 }
 
-.ellipse-2 {
+.outfocus {
   background-color: var(--ebk300);
   border-radius: 2px;
   height: 4px;
@@ -102,128 +155,42 @@ body{
   width: 4px;
 }
 
-.label_product {
-  background-color: var(--ebred);
-  border-radius: 4px;
-  position: absolute;     
-  height: 16px;
-  width: 72px;
-  top:16px;
-  left: 16px;
-}
-.label_product h6{
-    color:white;
+
+
+.label {
+    background-color: var(--ebred);
+    border-radius: 4px;
+    position: absolute;     
+    padding: 2px 16px;
+    top:16px;
+    left: 16px;
+    color: white;
+    text-align: center;
 }
 
-.label_company {
-  background-color: var(--ebred);
-  border-radius: 4px;
-  position: absolute;     
-  height: 16px;
-  width: 72px;
-  top:16px;
-  left: 16px;
-}
-.label_company h6{
-    color:white;
-}
-
-table{
-    border: 1px var(--ebk300) solid;
-    border-radius: 8px;
+.feed_post_product, .feed_post_entity{
     width: 276px;
-    border-spacing: 0;  
-    margin-bottom: 24px;
-}
-
-th{
-    height: 196px;
+    height: 276px;
+    border-radius: 16px;
+    border: 1px solid var(--ebk300);
+    background-color: var(--ebblue);
     position: relative;
 }
-td{
-    background-color: var(--ebblue);
-    border-radius: 0 0 8px 8px;
-    height:75px;
-    padding: 0px 8px;
-}
-td h3{
+
+.feed_post_product .product_title, .entity_title{
+    display: table-cell;
+    height: 80px;
+    width: 276px;
+    vertical-align: middle;
     color:white;
-    line-height: normal;
-} 
-td h5{
-    color:var(--ebk500);  
-} 
+    padding: 16px;
+}
 
-.main-feed .feed-post-footer {
+.entity_logo{
     display: flex;
-    flex-direction: column;
-    height: 52px;
-    width: 276px;
+    background-color: white;
+    height: 196px;
 }
 
-.main-feed .feed-post-footer-entity {
-    display:flex;
-    align-items: center;
-    color: var(--ebk700);
-    text-decoration: none;
-    white-space : nowrap;
-    text-overflow: ellipsis;
-    font-family: Open Sans;
-    font-size: 12px;
-    color: var(--ebk700);
-    margin-bottom: 16px;
-}
-.main-feed .feed-post-footer-entity img {
-    border: 1px solid var(--ebk500);
-    border-radius: 11px;
-    margin-right:8px;
-}
-
-.main-feed .company-name {
-  align-self: center;
-  height: 16px;
-  letter-spacing: 0;
-  line-height: 16px;
-  margin-left: 9px;
-  min-width: 89px;
-}
-.feed-post-info{
-    display: flex;
-    justify-content: space-between;
-    font-family: Open Sans;
-    font-size: 12px;
-    color: var(--ebk700);
-}
-.main-feed .feed-post-footer ul li{
-    display: inline-block;
-    padding-right: 8px;
-}
-
-.main-feed .count-save {
-  height: 10px;
-  width: 10px;
-}
-.main-feed section footer img {
-    display: flex;
-    margin-right: 8px;
-    }
-.main-feed section footer {
-    display: flex;
-    align-items: flex-start;
-    width: 276px;
-}
-section footer ul{
-    display: inline-flex;
-    flex-wrap: wrap;
-    margin-top: 12px;
-    width: 232px;
-    list-style: none;
-}
-section footer ul li{
-    display: flex;
-    text-align: left;
-    padding-right: 8px;
-
-}
-
-
+.entity_logo > img{
+    margin: auto;
