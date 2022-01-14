@@ -1,0 +1,187 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: content-box;
+	list-style: none;
+}
+
+img{
+	display: block;
+}
+
+
+html{
+	height: 100%;
+}
+body {
+	background-color: grey;
+	display: flex;
+	flex-direction: column;
+	width: 320px;
+	height: 100%;
+}
+
+.gnb_header {
+	display: flex;
+	flex-direction: column;
+	background-color: white;
+	padding: 24px;
+	border-radius: 0 16px 0 0;
+	height: 100%;
+}
+
+.gbn_header>a, .gbn_header>form {
+	flex-shrink: 0;
+}
+
+.close_btn {
+	display: block;
+	text-align: right;
+	margin-bottom: 24px;
+	
+}
+
+.gnb_menu {
+	display: flex;
+	flex-grow: 2;
+}
+.gnb_menu>ul{
+	min-height: 142px;
+	max-height: 20px;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	align-content: space-between;
+	color: var(--ebblue);
+	
+}
+
+.gnb_menu>ul>li{
+	font-size: 20px;
+	font-weight: 700;
+
+	
+}
+form{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 272px;
+	margin-top: 24px;
+	
+}
+form>ul>li{
+	display: flex;
+	height: 40px;
+	width: 272px;
+	
+}
+
+form>input{
+	height: 32px;
+	border-radius: 8px;
+	color: white;
+	background-color: var(--ebblue);
+	border: none;
+}
+
+#signup>*{
+	font-weight: 300;
+	text-align: center;
+	line-height: 30px;
+	
+}
+#login_id, #login_pw{
+	border-bottom: 1px solid var(--ebk700);
+	
+}
+#login_id > label > input, #login_pw > label > input{
+	width: 100%;
+	border: none;
+	height: 32px;
+	margin-left: 1rem;
+	padding: 0 4px;
+}
+label{
+	display: flex;
+	align-items: center;
+	width: inherit;
+}
+	
+#login_rmb > label{
+	text-align: center;
+	margin: auto;
+}
+#login_rmb > label>input{
+	margin-right: 8px;
+
+}
+
+.gnb_footer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	flex-shrink: 0;
+	background-color: var(--ebblue);
+	color: white;
+	height: 140px;
+	padding: 0 24px;
+	border-radius: 0 0 16px 0;
+}
+.gnb_logo>*{
+	display: inline;
+}
+
+
+.gnb {
+	align-items: center;
+	background-color: var(--white);
+	display: flex;
+	height: 72px;
+	width: 375px;
+	padding: 0 18px 0 17px;
+	justify-content: space-between
+}
+
+.search_bar {
+	background-color: var(--ebk300);
+	width: 375px;
+	text-align: center;
+	padding: 16px;
+
+}
+
+.search_bar div {
+	display: flex;
+	align-items: center;
+	background-color: white;
+	border-radius: 8px;
+	border: 1px solid var(--ebk500)
+}
+
+input[type=search] {
+	float: left;
+	background-color: #ffffff00;
+	border: 0px;
+	padding: 4px 12px;
+	width: 301px;
+	height: 40px;
+	font: 16px Open Sans;
+	color: var(--ebk800);
+}
+
+::placeholder {
+	color: var(--ebk500);
+}
+
+.search_bar button {
+	width: 40px;
+	;
+	height: 40px;
+	float: left;
+	padding: 10px;
+	border: 0px;
+	background-color: #ffffff00;
+
+
+}
