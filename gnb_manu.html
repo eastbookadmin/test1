@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<meta charset="UTF-8">
 
@@ -7,31 +8,33 @@
 	<link rel="stylesheet" href="css/styleguide.css">
 	<title>gnb_open</title>
 	<style>
-		body {
-			background-color: grey;
-		}
+
 	</style>
 
 </head>
 
-<body class="gnb_body">
+<body>
 	<div class="gnb_header">
 		<a class="close_btn" href=""><img src="img/ic_chevron_left.svg"></a>
-		<ul class="gnb_menu">
-			<li>Home</li>
-			<li>Search</li>
-			<li>Product</li>
-			<li>Entity</li>
-		</ul>
+		<div class="gnb_menu">
+			<ul>
+				<li>Home</li>
+				<li>Search</li>
+				<li>Product</li>
+				<li>Entity</li>
+			</ul>
+		</div>
 		<form action="">
 			<ul>
-				<li><label><img src="img/ic_id.svg"><input type="email" name="id"></label></li>
-				<li><label><img src="img/ic_pw.svg"><input type="password" name="password"></label></li>
-				<li><label><input type="checkbox" name="remember">Remember</label></li>
+				<li id="login_id"><label><img src="img/ic_id.svg"><input type="email" name="id" placeholder="E-mail"></label></li>
+				<li id="login_pw"><label><img src="img/ic_pw.svg"><input type="password" name="password" placeholder="Password"></label></li>
+				<li id="login_rmb"><label><input type="checkbox" name="remember">
+						<h6 style="font-weight: 300;">Remember</h6>
+					</label></li>
 			</ul>
-			<input type="submit" name="login" value="Login">
-			<div>
-				You don't have and account?<a href="">Sign up</a>
+			<input id="btn_login" type="submit" name="login" value="Login">
+			<div id="signup">
+				<h6>You don't have and account? <a href="">Sign up</a></h6>
 			</div>
 		</form>
 	</div>
@@ -44,4 +47,6 @@
 			<h6 style="font-weight: 300">© 2022 EASTBOOK. All right reserved.</h6>
 		</div>
 	</footer>
-</body></html>
+</body>
+
+</html>
